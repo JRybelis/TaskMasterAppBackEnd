@@ -26,6 +26,8 @@ namespace TaskMasterApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var defaultConnectionString = Configuration.GetConnectionString("DefaultConnectionString");
+
             services.AddCors();
             services.AddControllers();
             services.AddSwaggerGen(c =>
