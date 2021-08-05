@@ -1,6 +1,6 @@
 ﻿namespace TaskmasterCore.Models
 {
-    public class Task
+    public class TaskItem
     {
         public int Id { get; set; }
         public string Text { get; set; }
