@@ -28,6 +28,8 @@ namespace TaskMasterApp
         {
             var defaultConnectionString = Configuration.GetConnectionString("DefaultConnectionString");
 
+            services.AddAutoMapper(typeof(Startup));
+
             services.AddCors();
             services.AddControllers();
             services.AddSwaggerGen(c =>
