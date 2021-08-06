@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using TaskMasterApp.Data;
 
 namespace TaskMasterApp
 {
@@ -29,6 +31,7 @@ namespace TaskMasterApp
             var defaultConnectionString = Configuration.GetConnectionString("DefaultConnectionString");
 
             services.AddAutoMapper(typeof(Startup));
+            services.AddDbContext<DataContext>(d => d.UseSqlServer(defaultConnectionString));
 
             services.AddCors();
             services.AddControllers();

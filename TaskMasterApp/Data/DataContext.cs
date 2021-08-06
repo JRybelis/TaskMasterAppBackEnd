@@ -13,24 +13,24 @@ namespace TaskMasterApp.Data
         public DbSet<TaskItem> Tasks { get; set; }
         public DataContext(DbContextOptions options) : base(options)
         {
-            if (!Tasks.Any())
-            {
-                Tasks.Add(new TaskItem()
-                {
-                    Id = 1,
-                    Text = "Drink water",
-                    Day = "Thursday",
-                    Reminder = true
-                });
-                Tasks.Add(new TaskItem()
-                {
-                    Id = 2,
-                    Text = "Put away your clothes",
-                    Day = "Thursday",
-                    Reminder = false
-                });
-                SaveChanges();
-            }
+            //if (!Tasks.Any())
+            //{
+            //    Tasks.Add(new TaskItem()
+            //    {
+            //        Id = 1,
+            //        Text = "Drink water",
+            //        Day = "Thursday",
+            //        Reminder = true
+            //    });
+            //    Tasks.Add(new TaskItem()
+            //    {
+            //        Id = 2,
+            //        Text = "Put away your clothes",
+            //        Day = "Thursday",
+            //        Reminder = false
+            //    });
+            //    SaveChanges();
+            //}
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
