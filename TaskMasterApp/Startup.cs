@@ -12,7 +12,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using TaskMasterApp.Controllers;
 using TaskMasterApp.Data;
+using TaskMasterApp.Interfaces;
+using TaskMasterApp.Repositories;
 
 namespace TaskMasterApp
 {
@@ -32,6 +35,8 @@ namespace TaskMasterApp
 
             services.AddAutoMapper(typeof(Startup));
             services.AddDbContext<DataContext>(d => d.UseSqlServer(defaultConnectionString));
+            services.AddScoped(typeof(IRepository), typeof(Repository));
+            services.AddScoped(typeof(TasksController));
 
             services.AddCors();
             services.AddControllers();
