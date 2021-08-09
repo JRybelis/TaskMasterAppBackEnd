@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using TaskmasterCore.Dtos;
+using TaskmasterCore.Models;
 
 namespace TaskMasterApp.Mappings
 {
@@ -12,7 +8,7 @@ namespace TaskMasterApp.Mappings
     {
         public MappingsProfile()
         {
-            CreateMap<TaskDto, Task>().ReverseMap();
+            CreateMap<TaskItemDto, TaskItem>().ReverseMap();
         }
     }
 }

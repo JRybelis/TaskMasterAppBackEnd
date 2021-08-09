@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TaskmasterCore.Dtos
 {
-    public abstract class TaskDto
+    public abstract class TaskItemDto
     {
         [MaxLength(511)] public string Text { get; set; }
         [MaxLength(9)]public string Day { get; set; }
