@@ -38,11 +38,19 @@ namespace TaskMasterApp.Controllers
         }
 
         [HttpPost]
-        public async Task Upsert(TaskItemDto taskItemDto)
+        public async Task Post(TaskItemDto taskItemDto)
         {
             var entity = _mapper.Map<TaskItem>(taskItemDto);
 
-            await _repository.Upsert(entity);
+            await _repository.Post(entity);
+        }
+
+        [HttpPut]
+        public async Task Update(TaskItemUpdateDto taskItemUpdateDto)
+        {
+            var entity = _mapper.Map<TaskItem>(taskItemUpdateDto);
+
+            await _repository.Update(entity);
         }
 
         [HttpDelete("{id}")]
@@ -51,4 +59,5 @@ namespace TaskMasterApp.Controllers
             await _repository.Delete(id);
         }
     }
+    
 }

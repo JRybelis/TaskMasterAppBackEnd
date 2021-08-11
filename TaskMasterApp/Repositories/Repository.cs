@@ -34,16 +34,16 @@ namespace TaskMasterApp.Repositories
             return entity;
         }
 
-        public async Task Upsert(TaskItem entity)
+        public async Task Post(TaskItem entity)
         {
-            if (entity.Id != 0)
-            {
-                _context.Update(entity);
-            }
-            else
-            {
-                _context.Add(entity);
-            }
+            _context.Add(entity);
+            
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task Update(TaskItem entity)
+        {
+            _context.Update(entity);
 
             await _context.SaveChangesAsync();
         }

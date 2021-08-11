@@ -8,7 +8,8 @@ namespace TaskMasterApp.Interfaces
     {
         Task<List<TaskItem>> GetAll();
         Task<TaskItem> GetById(int id);
-        Task Upsert(TaskItem entity);
+        Task Post(TaskItem entity);
+        Task Update(TaskItem entity);
         Task Delete(int id);
     }
 }

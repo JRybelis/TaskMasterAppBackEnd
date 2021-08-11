@@ -9,6 +9,7 @@ namespace TaskMasterApp.Mappings
         public MappingsProfile()
         {
             CreateMap<TaskItemDto, TaskItem>().ReverseMap();
+            CreateMap<TaskItemUpdateDto, TaskItem>().ReverseMap();
         }
     }
 }
