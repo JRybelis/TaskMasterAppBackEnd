@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using TaskmasterCore.Models;
 
 namespace TaskMasterApp.Data
@@ -31,7 +26,7 @@ namespace TaskMasterApp.Data
         {
             modelBuilder.Entity<TaskItem>()
                 .Property(ti => ti.Day)
-                .HasMaxLength(10)
+                .HasMaxLength(9)
                 .IsRequired();
 
             modelBuilder.Entity<TaskItem>()

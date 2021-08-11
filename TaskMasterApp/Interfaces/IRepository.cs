@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Threading.Tasks;s
+using System.Threading.Tasks;
 using TaskmasterCore.Models;
 
 namespace TaskMasterApp.Interfaces
