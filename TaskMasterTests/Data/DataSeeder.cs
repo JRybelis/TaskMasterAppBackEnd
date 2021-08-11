@@ -2,7 +2,7 @@
 using TaskMasterApp.Data;
 using TaskmasterCore.Models;
 
-namespace TaskMasterTests
+namespace TaskMasterTests.Data
 {
     public static class DataSeeder
     {
